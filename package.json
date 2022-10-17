@@ -1,0 +1,19 @@
+{
+  "name": "sakkouni-hasna-sakkouni_3_24092021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./asset/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakkouni/Sakkouni-Hasna-Sakkouni_3_24092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sakkouni/Sakkouni-Hasna-Sakkouni_3_24092021/issues"
+  },
+  "homepage": "https://github.com/Sakkouni/Sakkouni-Hasna-Sakkouni_3_24092021#readme"
+}
