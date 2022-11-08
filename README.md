@@ -1,9 +1,6 @@
 # Sakkouni-Hasna-Sakkouni_3_24092021 " OH MY FOOD"
 
-
-          ![image](https://user-images.githubusercontent.com/85743137/200516543-6f5db334-dc40-44fe-b877-99031c73c100.png)
-
-1/Objectifs
+1/Objectif
 
 Développer un site proposant le menu de 4 grands restaurants parisiens.
 Permettre la réservation en ligne et la composition de menus.
