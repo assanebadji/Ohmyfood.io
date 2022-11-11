@@ -85,6 +85,7 @@ margin-top: 0;
   align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
+  font-weight: bold;
   flex-grow: 1;
   border-radius: 1.25rem;
   box-shadow:0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
@@ -101,36 +102,69 @@ margin-top: 0;
   border-radius: 100px;
   display: flex;
   justify-content: center;
-  align-items: cente
-  
-  color: #fff;
+  align-items: center;
+  color:#fff;
   position: absolute;
-  left: -0.75rem;
+  left: -1rem;
+}
+
+i.fas { 
+color: grey;
+margin-right: 1rem;
+
 }
 
                                   /*RESTAURANT*/
 
+h4{
+color: black;
+width: 80%;
+display: block;
+font-size: 1.17em;
+font-weight: bold;
+}
+                                  
 .restaurant{
   background-color:#f6f6f6;
   padding: 2rem 1rem;
 }
 
 .card{
-  background-color: #fff;
+  background-color:#f6f6f6;
   border-radius: 1rem;
   position: relative;
   text-decoration: none;
-  color: inherit;
+  color: green;
   display: block;
 }
 
 .card_img{
-  height: 12rem;
+   height: 12rem;
     width: 100%;
     border: 0 solid transparent;
     border-radius: 1rem 1rem 0 0;
     box-shadow: none;
     object-fit: cover;
+} 
+
+.new{
+border: 1px solid whitesmoke; 
+font-size: 0.9em;
+font-weight: bold;
+position: absolute;
+border-radius: 1px;
+background-color: lightgray;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 2rem;
+width: 5rem;
+background-color: #99e2d0;
+color: #1b6150;
+display: grid;
+place-items: center;
+right: 1rem;
+top: 1rem;
 } 
 
 
