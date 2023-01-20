@@ -1,12 +1,343 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap");
-@import "./base";
-@import "./Layout/header";
-@import"./Layout/navbar";
+@import "Base/_general";
+@import "Base/_fonts";
+@import "Utils/_variables";
+@import "Layout/_layout";
+@import "Utils/_mixin";
+@import "Components/_components";
+@import "Utils/_animation";
+
+//LOCALISATION
+.localisation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    box-shadow: inset 0 2px 5px $shadow-clr;
+
+    &>i{
+        margin-right: 10px;
+    }
+}
+
+//EXPLORE
+.explore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: $bg-color;
+
+    &__title{
+        text-align: center;
+        margin: 30px 20px 0;
+    }
+
+    &__text{
+        text-align: center;
+        margin: 20px
+    }
+}
 
 
-body {
-    font-family:"Roboto" sans-serif;
-    background-color: white;
-    margin:0 ;
-    text-align: center;
-  }
+//WORKING
+.working{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    
+    &>ul{
+        @media screen and (min-width: 1024px){
+        display: flex;
+        }
+    }
+
+    &__card{
+        position: relative;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        margin: 0 auto 20px auto;
+        border-radius: 1.2em;
+        background-color: $bg-color;
+        @include box-shadow;
+        transition: background-color 300ms;
+
+        @media screen and (min-width: 1024px) {
+            width: 30%;           
+        }
+
+        &:hover{
+            @include box-shadow-hover;
+            transition: box-shadow 300ms, background-color 300ms;
+            background-color: lighten($color: $color-primary, $amount: 30%);
+        }
+
+        &:hover > i{
+            transition: color 200ms;
+            color: $color-primary;
+        }
+
+        
+        &>p{
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            border-radius: 50%;
+            color: white;
+            background-color: $color-primary;
+         }
+        
+        &>i{
+            font-size: 1.6em;
+            margin-right: 15px;
+            color: $i-clr;
+        }
+    }
+}
+
+
+//RESTAURANTS
+.restaurants{
+    width: 100%;
+    margin: auto;
+    padding: 20px 0 50px 0;
+    background-color: $bg-color;
+
+    &>h2{
+        margin-left: 5%;
+    }
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 275px;
+    width: 90%;
+    margin: auto auto 20px auto;
+    border-radius: $card-border-radius;
+    @include box-shadow;
+    transition: box-shadow 200ms;
+
+    &:hover{
+        @include box-shadow-hover;
+        transition: box-shadow 200ms;
+    }
+
+    &__img{
+        position: relative;
+
+        &>img{
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: $card-img-border-radius;        
+        }
+
+        &>.badge{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            border-radius: 0.2em;
+            color: $badge-txt;
+            background-color: $color-tertiary
+        }
+    }
+    &__body{
+        position: relative;
+        height: 75px;
+
+        &__text>h3{
+            position: absolute;
+            top: -10px;  
+            left: 10px;       
+        }
+
+        &__text>p{
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+    }      
+    
+    @media screen and (min-width: 1024px){
+        width: 45%;
+    }
+}
+
+//BANNER
+.banner{
+    object-fit: cover;
+    width: 100%;
+    max-height: 30rem;
+
+        @media screen and (min-width: 600px){
+        min-height: 20rem;
+        }
+}
+
+//MENU
+.menu{
+    width: 100%;
+    margin-top: -4em;
+
+    padding-bottom: 30px;
+    border-radius: 2em 2em 0 0;
+    background-color: $bg-color;
+    position: relative;
+
+    &__title{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: 20px;
+        
+        &>h2{
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.7em;
+            margin: 0.6em 0;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+.submenus-container{
+    @media screen and (min-width: 1024px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.submenus{
+    position: relative;
+    width: 95%;
+    margin: 0 0 30px 10px;    
+
+    @media screen and (min-width: 1024px){
+        width: 32%;
+    }
+}
+
+.submenu__type{
+    position: relative;
+        margin: 0 0 30px 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 15px;
+        width: 40px;
+        border-bottom: 3px solid $color-tertiary;
+    }
+}
+
+.submenu__card{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 30px 0;
+    background-color: #FFF;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    @include box-shadow;
+    transition: box-shadow 400ms ease-in-out; 
+
+    @media screen and (min-width: 1024px){
+        width: 95%;
+    }
+
+    &:hover > .validation-container{
+        width: 80px;
+        transition: 400ms ease-in-out;  
+
+        & > .validation-icon{
+            transform: rotate(360deg);
+            transition: 400ms ease-in-out;
+            margin-right: 0;
+        }            
+    }  
+
+    &__content{
+        width: 85%;
+        white-space: nowrap;
+        overflow: hidden;
+        
+        &>h3, p{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 10px 0px 10px 20px;
+        }
+
+        &>p {
+            @media screen and (min-width: 1024px){
+                font-size: 0.85em;
+            }
+        }
+    }
+
+    &__price{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 15%;
+        font-weight: 500;
+        padding-left: 0.5em;
+        margin: 0 20px 11px 0;
+    }
+
+    .validation-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 0;
+        background-color: $color-tertiary;
+        border-radius: 0 1em 1em 0;
+        transition: all 400ms ease-in-out;
+        
+    }
+
+    .validation-icon{
+        display: flex;
+        padding: 4px 5px 4px 5px;
+        border-radius: 2em;
+        margin-right: -30px;
+        background-color: #FFF;
+        color: $color-tertiary;
+        transition: all 300ms ease-in-out
+    }
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+

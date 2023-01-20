@@ -1,0 +1,112 @@
+// LOADING SPINNER
+
+
+.lds{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    opacity: 0.8;
+    z-index: 1000;
+    animation: 2s forwards fadeout;
+}
+
+.lds-large{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid $color-primary;
+    border-color: $color-primary transparent $color-primary transparent;
+    animation: 2s linear infinite reverse both lds;
+}
+
+.lds-medium{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 6px solid $color-tertiary;
+    border-color: $color-tertiary transparent $color-tertiary transparent;
+    animation: 1.5s linear infinite both lds;
+}
+
+.lds-small{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid $color-secondary;
+    border-color: $color-secondary transparent $color-secondary transparent;
+    animation: 750ms linear infinite reverse both lds;
+}
+
+@keyframes lds{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeout{
+    0%{    
+        opacity: 0.8;
+
+    }
+
+    80%{
+        opacity: 0.8;
+
+    }
+
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}  
+
+
+
+
+
+//SLIDE MENU
+
+.delay1{
+    @include slide-menu;
+    animation-delay: $animation-delay;
+}
+
+.delay2{
+    @include slide-menu;
+    animation-delay: $animation-delay*2;
+
+}
+
+.delay3{
+    @include slide-menu;
+    animation-delay: $animation-delay*3;
+}
+
+.delay4{
+    @include slide-menu;
+    animation-delay: $animation-delay*4;
+}
+
+@keyframes slide{
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

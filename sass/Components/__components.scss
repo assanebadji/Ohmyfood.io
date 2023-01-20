@@ -1,0 +1,43 @@
+//BUTTON
+.btn{
+    @include btn;
+    @include box-shadow;
+    padding: 15px 20px;
+    transition: box-shadow 200ms, filter 200ms;
+
+    &:hover{
+        filter: brightness(1.1);
+        cursor: pointer;
+        transition: box-shadow 200ms, filter 200ms;
+        @include box-shadow-hover;
+    }
+}
+
+//HEART ICON
+.heart-icon{
+    position: absolute;
+    font-size: 1.6em;
+    top: 20px;
+    right: 20px;
+                           
+    &:hover > .heart--empty{
+        transition: opacity 1000ms ease;
+        opacity: 0;
+    }
+    &:hover > .heart--fill{       
+        transition: opacity 300ms;
+        opacity: 1;
+    }           
+}
+
+.heart-icon>.heart--fill{
+    position: absolute;
+    left: 50%;
+    top: 1px;
+    transform: translateX(-50%);
+    background: $heart-grd;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;            
+    transition: opacity 500ms;            
+}
