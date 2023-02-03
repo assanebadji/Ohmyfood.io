@@ -120,7 +120,7 @@ footer > ul > li > a > p {
   opacity: 0;
 }
 .heart-icon:hover > .heart--fill {
-  transition: opacity 200ms;
+  transition: opacity 300ms;
   opacity: 1;
 }
 
@@ -129,11 +129,11 @@ footer > ul > li > a > p {
   left: 50%;
   top: 1px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 90%);
+  background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 200ms;
+  transition: opacity 500ms;
 }
 
 .lds {
